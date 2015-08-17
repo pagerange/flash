@@ -1,0 +1,7 @@
+Flash
+ [x] Flash message exists
+ [x] Get message
+ [x] Message content
+ [x] Classes content
+ [x] Flash message removed after display
+
