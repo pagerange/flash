@@ -1,0 +1,21 @@
+{
+    "name": "pagerange/flash",
+    "description": "Simple session flash messaging",
+    "license": "MIT",
+    "keywords": ["session", "flash" ],
+    "authors": [
+        {
+            "name": "Seve George",
+            "email": "steve@pagerange.com",
+            "role": "developer",
+            "homepage": "http://www.pagerange.com"
+        }
+    ],
+    "require": {},
+    "require-dev": {},
+    "autoload": {
+        "psr-0" : {
+          "Pagerange\\Flash" : "src"
+        }
+    }
+}
