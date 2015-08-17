@@ -1,12 +1,8 @@
-# Session
+# Flash
 
-## PHP Session Wrapper
+## Flash messaging
 
-This class provides an easy to use wrapper for working with the PHP Session as well as some handy
-methods for setting Session (Flash) messages.
-
-Why another PHP Session wrapper?  I needed something simple for my own one-off projects, including
-the pagerange/auth package.
+This class provides a simple wrapper for setting and displaying flash messages using the PHP session.
 
 ### Dependencies
 
@@ -15,47 +11,28 @@ None.
 ### Installation
 
 ```bash
-	composer require pagerange/session
+	composer require pagerange/flash
 ```
 
 ### Features
 
-Class provides an easy to use, intiutive object wrapper to basic PHP session management.
+Note: session must be started manually with `session_start()` 
 
-* Starts session if not already started
-* Set session vars
-* Get session vars
-* Remove session vars
-* Check if session var is set
-* Get session id
-* Regenerate session id
-* Destroy session
 * Set Flash message
 * Set array of CSS classes for Flash message
-* Get Flash message
+* Check if flash message is set
+* Display Flash message
 
 ### Usage
 
 ```
 
-use Pagerange\Session\Session;
-use Pagerange\Session\Flash;
+use Pagerange\Flash\Flash;
 
-$session = new Session();
 $flash = new Flash();
 
-// Use as required
-
-$session->set('logged_in', true); // set value of logged_in to true
-$session->set('username', 'Steve'); // set value of username to Steve
-$session->get('logged_in'); // returns value of logged_in, NULL if not set
-$session->check('username'); // true if username exists in session, false otherwise
-$session->remove('username'); // deletes username from session
-$session->destroy(); // destroys the current session
-$session->regenerate(); // regenerate session_id 
-
 // set flash message with class alert-success
-$flash->message('You are now logged in!', ['alert-success']); 
+$flash->message('You are now logged in!', ['alert', alert-success']); 
 
 // output flash message, if any.  Message is removed from session after display.
 // Returns empty string if flash message is not set.
@@ -63,14 +40,13 @@ $flash->flash()
 
 ```
 
-Flash messaging is output in a div with the classes flash, alert, and a series of classes that match
-Bootstrap alert classes, and can be styled accordingly.
+Flash messaging is output in a div with the class 'flash' by default.  You can add additional classes as the second parameter in an array when setting the message.
 
 ```html
 
   // Flash message in sample above would be output like so:
 
-  <div class="flash alert alert-success">
+  	<div class="flash alert alert-success">
 		You are now logged in
 	</div>
 
@@ -93,17 +69,13 @@ Note: Flash messaging will work without jQuery, but will have no animation.
 
 ### Demo
 
-A simple demo of the session class in action, as used by the Auth class, can be seen here:
+A simple demo of the Flash class in action, as used by the Auth class, can be seen here:
 
-[Live demo of Session and Flash](http://www.pagerange.com/projects/auth/demo/)
+[Live demo of Flash](http://www.pagerange.com/projects/auth/demo/)
 
 ### Support
 
-[Session/Flash Github issues page](https://github.com/pagerange/session/issues/)
-
-I can provide basic support, and will accept feature requests.  
-
-Also, please feel free to contribute.
+[Pagerange/Flash Github issues page](https://github.com/pagerange/session/issues/)
 
 ### License
 
@@ -125,4 +97,4 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMA
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
-# Updated 2015-08-12
+**Updated 2015-08-12**
