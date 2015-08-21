@@ -11,6 +11,8 @@
 
 namespace Pagerange\Flash;
 
+use Pagerange\Flash\Views\Message;
+
 class Flash
 {
 
@@ -69,7 +71,8 @@ class Flash
     private function create($flash)
     {
         $classes = $this->getClasses($flash);
-        return require( __DIR__ . '/views/message.php');
+        $message = new Message($flash, $classes);
+        return $message->getMessage();
     }
 
 // end of class
