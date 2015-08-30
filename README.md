@@ -67,11 +67,6 @@ Note: Flash messaging will work without jQuery, but will have no animation.
 
 ```
 
-### Demo
-
-A simple demo of the Flash class in action, as used by the Auth class, can be seen here:
-
-[Live demo of Flash](http://www.pagerange.com/projects/auth/demo/)
 
 ### Support
 
