@@ -10,8 +10,32 @@ None.
 
 ### Installation
 
+Note: has not yet been released on Packagist.  You can still install  using Composer by adding a repositories section to composer.json:
+
+```json
+
+{
+
+ "repositories": [
+  {
+    "type": "vcs",
+    "url": "https://github.com/pagerange/flash.git"
+  }
+ ],
+ "require": {
+  "pagerange/flash": "@alpha"
+ }
+
+}
+
+```
+
+Then install with composer:
+
 ```bash
-	composer require pagerange/flash
+
+  composer install
+
 ```
 
 ### Features
