@@ -1,7 +1,7 @@
 <?php
 
-session_start();
-ob_start();
+// session_start();
+// ob_start();
 
 require dirname(__DIR__) . '/src/Pagerange/Flash/Flash.php';
 require dirname(__DIR__) . '/src/Pagerange/Flash/Views/Message.php';
