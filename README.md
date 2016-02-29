@@ -1,6 +1,7 @@
-[![Build Status](https://travis-ci.org/pagerange/flash.svg?branch=master)](https://travis-ci.org/pagerange/flash)
 
 # Flash
+
+[![Build Status](https://travis-ci.org/pagerange/flash.svg?branch=master)](https://travis-ci.org/pagerange/flash)
 
 ## Flash messaging
 
